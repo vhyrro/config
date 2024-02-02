@@ -35,12 +35,15 @@ end, { expr = true, silent = true })
 vim.keymap.set("t", "<C-n>", "<C-\\><C-n>", { desc = "moves to normal mode in a terminal" })
 
 -- Telescope
-vim.keymap.set("n", "<Leader>ff", "<cmd>Telescope find_files<CR>", { desc = "fuzzy searches through files" })
-vim.keymap.set("n", "<Leader>lg", "<cmd>Telescope live_grep<CR>", { desc = "lives greps through the cwd" })
-vim.keymap.set("n", "<Leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "fuzzy searches through help pages" })
+vim.keymap.set("n", "<Leader>ff", "<cmd>Telescope find_files<CR>", { desc = "fuzzy searches through files", silent = true })
+vim.keymap.set("n", "<Leader>lg", "<cmd>Telescope live_grep<CR>", { desc = "lives greps through the cwd", silent = true })
+vim.keymap.set("n", "<Leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "fuzzy searches through help pages", silent = true })
 
 -- Neogen
-vim.keymap.set("n", "<Leader>o", "<cmd>Neogen<CR>", { desc = "generates documentation for the current item" })
+vim.keymap.set("n", "<Leader>o", "<cmd>Neogen<CR>", { desc = "generates documentation for the current item", silent = true })
 
 -- Lsp Lines
 vim.keymap.set("n", "<Leader>lt", function() require("lsp_lines").toggle() end, { desc = "toggle `lsp_lines`" })
+
+-- Oil
+vim.keymap.set("n", "<Leader><Leader>", "<cmd>Oil<CR>", { silent = true })
