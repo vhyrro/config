@@ -1,0 +1,1 @@
+require("github-preview").setup({})

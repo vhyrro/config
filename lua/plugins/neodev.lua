@@ -10,7 +10,7 @@ local lspconfig = require("lspconfig")
 
 local on_attach = require("lsp-attach")
 
-for _, lang in ipairs({"lua_ls"}) do
+for _, lang in ipairs({"lua_ls", "jedi_language_server"}) do
     lspconfig[lang].setup({
         on_attach = on_attach,
     })
