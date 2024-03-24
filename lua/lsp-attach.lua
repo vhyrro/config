@@ -24,7 +24,9 @@ return function(client, bufnr)
     vim.keymap.set('n', '<space>fo', vim.lsp.buf.format, bufopts)
 
     if client.server_capabilities.inlayHintProvider then
-        vim.lsp.inlay_hint.enable(bufnr)
+        vim.lsp.inlay_hint.enable(true, {
+            bufnr = bufnr,
+        })
     end
 end
 

@@ -1,35 +1,58 @@
 [plugins]
-"image.nvim" = "1.2.0"
-"lua-utils.nvim" = "1.0.2"
-"plenary.nvim" = "scm"
-"rocks-config.nvim" = "1.2.3"
-"rocks-dev.nvim" = "1.1.2"
-"rocks-git.nvim" = "1.3.0"
-"rocks.nvim" = "2.19.0"
-"telescope.nvim" = "scm"
-luarocks-build-rust-mlua = "0.2.0"
-luasnip = "2.2.0"
-nvim-dap = "0.7.0"
-nvim-lspconfig = {version = "0.1.7"}
-nvim-surround = "2.1.5"
-nvim-web-devicons = "0.99"
-rustaceanvim = "4.14.1"
-neogit = "scm"
 "kanagawa.nvim" = "scm"
-"oil.nvim" = "scm"
-neogen = "scm"
-"twilight.nvim"= "scm"
+"lua-utils.nvim" = "1.0.2"
 "neodev.nvim"= "scm"
-"zen-mode.nvim"= "scm"
+"oil.nvim" = "scm"
+"otter.nvim" = "1.15.0"
+"pathlib.nvim" = "2.2.2"
+"plenary.nvim" = "scm"
+"rocks-config.nvim" = "1.6.0"
+"rocks-dev.nvim" = "1.2.1"
+"rocks-git.nvim" = "1.5.1"
 "rocks-treesitter.nvim" = "scm"
+"rocks.nvim" = "2.29.2"
+"telescope.nvim" = "scm"
+"twilight.nvim"= "scm"
+"zen-mode.nvim"= "scm"
+"2048.nvim" = "2.8.2"
+"image.nvim" = "1.3.0"
+"sweetie.nvim" = "3.1.1"
+luarocks-build-rust-mlua = "0.2.0"
+luasnip = "2.3.0"
+neogen = "scm"
+neogit = "scm"
+neorg = "8.6.0"
+nvim-dap = "0.8.0"
+nvim-lspconfig = "0.1.8"
+nvim-surround = "2.1.5"
+nvim-web-devicons = "0.100"
+rustaceanvim = "4.24.0"
+"overseer.nvim" = "1.4.0"
 
-# --------- TREESITTER PARSERS ---------
+# ----- TREESITTER PARSERS -----
+tree-sitter-markdown = "scm"
+tree-sitter-markdown_inline = "scm"
 tree-sitter-c = "scm"
-tree-sitter-lua = "scm"
-tree-sitter-vim = "scm"
-tree-sitter-vimdoc = "scm"
 tree-sitter-query = "scm"
-tree-sitter-latex = "scm"
+tree-sitter-lua = "scm"
+tree-sitter-python = "scm"
+
+tree-sitter-yaml = "scm"
+tree-sitter-vimdoc = "scm"
+tree-sitter-astro = "scm"
+tree-sitter-typescript = "scm"
+tree-sitter-javascript = "scm"
+tree-sitter-scheme = "scm"
+tree-sitter-janet_simple = "scm"
+tree-sitter-typst = "scm"
+tree-sitter-toml = "scm"
+tree-sitter-nix = "scm"
+tree-sitter-json = "scm"
+tree-sitter-rust = "scm"
+
+[plugins.neotest]
+version = "5.2.5"
+config = {}
 
 [plugins.nvim-treesitter]
 git = "nvim-treesitter/nvim-treesitter"
@@ -39,7 +62,7 @@ git = "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
 
 [plugins."gitsigns.nvim"]
 git = "lewis6991/gitsigns.nvim"
-rev = "v0.7"
+rev = "v0.8.1"
 
 [plugins."toggleterm.nvim"]
 git = "akinsho/toggleterm.nvim"
@@ -63,5 +86,34 @@ git = "hrsh7th/cmp-nvim-lsp"
 git = "wallpants/github-preview.nvim"
 rev = "v1.9.0"
 
+[plugins."diffview.nvim"]
+git = "sindrets/diffview.nvim"
+
+[bundles]
+lsp.items = [
+    "neodev.nvim",
+    "nvim-lspconfig",
+    "nvim-cmp"
+]
+
 [config]
 auto_setup = true
+colorscheme = "kanagawa-wave"
+
+[config.options]
+number = true
+relativenumber = true
+splitbelow = true
+splitright = true
+wrap = false
+expandtab = true
+tabstop = 4
+shiftwidth = 4
+clipboard = "unnamedplus"
+scrolloff = 999
+virtualedit = "block"
+inccommand = "split"
+ignorecase = true
+termguicolors = true
+updatetime = 100
+conceallevel = 2
