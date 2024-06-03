@@ -5,7 +5,8 @@ require("neorg").setup({
             config = {
                 workspaces = {
                     neorg = "~/neorg",
-                }
+                    test = "~/neorg-test/",
+                },
             }
         },
         ["core.concealer"] = {},

@@ -1,16 +1,15 @@
 [plugins]
 "kanagawa.nvim" = "scm"
 "lua-utils.nvim" = "1.0.2"
-"neodev.nvim"= "scm"
 "oil.nvim" = "scm"
-"otter.nvim" = "1.15.0"
+"otter.nvim" = "1.15.1"
 "pathlib.nvim" = "2.2.2"
 "plenary.nvim" = "scm"
-"rocks-config.nvim" = "1.6.0"
-"rocks-dev.nvim" = "1.2.1"
+"rocks-config.nvim" = "2.1.1"
+"rocks-dev.nvim" = "1.2.3"
 "rocks-git.nvim" = "1.5.1"
 "rocks-treesitter.nvim" = "scm"
-"rocks.nvim" = "2.29.2"
+"rocks.nvim" = "2.32.1"
 "telescope.nvim" = "scm"
 "twilight.nvim"= "scm"
 "zen-mode.nvim"= "scm"
@@ -20,13 +19,11 @@
 luarocks-build-rust-mlua = "0.2.0"
 luasnip = "2.3.0"
 neogen = "scm"
-neogit = "scm"
-neorg = "8.6.0"
+neorg = "8.8.1"
 nvim-dap = "0.8.0"
 nvim-lspconfig = "0.1.8"
 nvim-surround = "2.1.5"
 nvim-web-devicons = "0.100"
-rustaceanvim = "4.24.0"
 "overseer.nvim" = "1.4.0"
 
 # ----- TREESITTER PARSERS -----
@@ -49,9 +46,18 @@ tree-sitter-toml = "scm"
 tree-sitter-nix = "scm"
 tree-sitter-json = "scm"
 tree-sitter-rust = "scm"
+toml-edit = "0.4.1"
+"rocks-lazy.nvim" = "scm"
+
+[plugins.rustaceanvim]
+version = "4.25.1"
+
+[plugins."gen.nvim"]
+version = "scm"
+config = {}
 
 [plugins.neotest]
-version = "5.2.5"
+version = "5.3.3"
 config = {}
 
 [plugins.nvim-treesitter]
@@ -62,7 +68,7 @@ git = "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
 
 [plugins."gitsigns.nvim"]
 git = "lewis6991/gitsigns.nvim"
-rev = "v0.8.1"
+rev = "v0.9.0"
 
 [plugins."toggleterm.nvim"]
 git = "akinsho/toggleterm.nvim"
@@ -89,16 +95,19 @@ rev = "v1.9.0"
 [plugins."diffview.nvim"]
 git = "sindrets/diffview.nvim"
 
+[plugins."lazydev.nvim"]
+git = "folke/lazydev.nvim"
+rev = "v1.6.0"
+
 [bundles]
 lsp.items = [
-    "neodev.nvim",
     "nvim-lspconfig",
     "nvim-cmp"
 ]
 
 [config]
 auto_setup = true
-colorscheme = "kanagawa-wave"
+colorscheme = "sweetie"
 
 [config.options]
 number = true
@@ -117,3 +126,7 @@ ignorecase = true
 termguicolors = true
 updatetime = 100
 conceallevel = 2
+background = "light"
+
+[edit]
+# sources.unsynced = false

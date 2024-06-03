@@ -1,19 +1,18 @@
 local rocks_config = {
-	rocks_path = "/home/vhyrro/.local/share/nvim/rocks",
-	luarocks_binary = "/home/vhyrro/.local/share/nvim/rocks/bin/luarocks",
+    rocks_path = "/home/vhyrro/.local/share/nvim/rocks",
 }
 
 vim.g.rocks_nvim = rocks_config
 
 local luarocks_path = {
-	vim.fs.joinpath(rocks_config.rocks_path, "share", "lua", "5.1", "?.lua"),
-	vim.fs.joinpath(rocks_config.rocks_path, "share", "lua", "5.1", "?", "init.lua"),
+    vim.fs.joinpath(rocks_config.rocks_path, "share", "lua", "5.1", "?.lua"),
+    vim.fs.joinpath(rocks_config.rocks_path, "share", "lua", "5.1", "?", "init.lua"),
 }
 package.path = package.path .. ";" .. table.concat(luarocks_path, ";")
 
 local luarocks_cpath = {
-	vim.fs.joinpath(rocks_config.rocks_path, "lib", "lua", "5.1", "?.so"),
-	vim.fs.joinpath(rocks_config.rocks_path, "lib64", "lua", "5.1", "?.so"),
+    vim.fs.joinpath(rocks_config.rocks_path, "lib", "lua", "5.1", "?.so"),
+    vim.fs.joinpath(rocks_config.rocks_path, "lib64", "lua", "5.1", "?.so"),
 }
 package.cpath = package.cpath .. ";" .. table.concat(luarocks_cpath, ";")
 

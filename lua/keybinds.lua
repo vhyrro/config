@@ -25,7 +25,10 @@ vim.keymap.set({ "n", "v" }, "<Leader>C", '"_C')
 vim.keymap.set("n", "<Leader>p", "<cmd>InspectTree<CR>", { desc = "opens the `:InspectTree` split", silent = true })
 
 -- Neogit
-vim.keymap.set("n", "<Leader>g", "<cmd>Neogit<CR>", { desc = "activate neogit", silent = true })
+-- vim.keymap.set("n", "<Leader>g", "<cmd>Neogit<CR>", { desc = "activate neogit", silent = true })
+
+-- Lazyjj
+vim.keymap.set("n", "<Leader>g", '<cmd>TermExec cmd="lazyjj" direction=float name=lazyjj<CR>', { silent = true })
 
 -- Toggleterm
 vim.keymap.set("n", "<Leader>t", function()
