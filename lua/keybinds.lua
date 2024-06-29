@@ -31,7 +31,7 @@ vim.keymap.set("n", "<Leader>p", "<cmd>InspectTree<CR>", { desc = "opens the `:I
 vim.keymap.set("n", "<Leader>g", '<cmd>TermExec cmd="lazyjj" direction=float name=lazyjj<CR>', { silent = true })
 
 -- Toggleterm
-vim.keymap.set("n", "<Leader>t", function()
+vim.keymap.set("n", "<Leader>T", function()
     return "<cmd>" .. tostring(vim.v.count1) .. "ToggleTerm direction=float<CR>"
 end, { expr = true, silent = true })
 
@@ -50,3 +50,13 @@ vim.keymap.set("n", "<Leader>lt", function() require("lsp_lines").toggle() end, 
 
 -- Oil
 vim.keymap.set("n", "<Leader><Leader>", "<cmd>Oil<CR>", { silent = true })
+
+-- Rustaceanvim
+vim.keymap.set("n", "<Leader>e", "<cmd>RustLsp explainError<CR>", { silent = true })
+
+-- Neotest
+vim.keymap.set("n", "<Leader>tr", function() require("neotest").run.run() end, { silent = true })
+vim.keymap.set("n", "<Leader>tw", function() require("neotest").watch.toggle() end, { silent = true })
+vim.keymap.set("n", "<Leader>ts", function() require("neotest").summary.toggle() end, { silent = true })
+vim.keymap.set("n", "<Leader>to", function() require("neotest").output.open() end, { silent = true })
+vim.keymap.set("n", "<Leader>tp", function() require("neotest").output_panel.toggle() end, { silent = true })
