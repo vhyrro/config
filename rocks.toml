@@ -49,6 +49,7 @@ tree-sitter-rust = "scm"
 toml-edit = "0.4.1"
 "rocks-lazy.nvim" = "scm"
 "gruvbox.nvim" = "2.0.0"
+nvim-dap-ui = "4.0.0"
 
 [plugins.rustaceanvim]
 version = "4.25.1"

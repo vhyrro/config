@@ -18,10 +18,10 @@ vim.keymap.set("n", "<Esc>", "<cmd>noh<CR>", { desc = "clears search highlights"
 vim.keymap.set({"n", "v"}, ";", ":")
 vim.keymap.set({"n", "v"}, ":", ";")
 
-vim.keymap.set({ "n", "v" }, "<Leader>d", '"_d')
-vim.keymap.set({ "n", "v" }, "<Leader>D", '"_D')
-vim.keymap.set({ "n", "v" }, "<Leader>c", '"_c')
-vim.keymap.set({ "n", "v" }, "<Leader>C", '"_C')
+vim.keymap.set("v", "<Leader>d", '"_d')
+vim.keymap.set("v", "<Leader>D", '"_D')
+vim.keymap.set("v", "<Leader>c", '"_c')
+vim.keymap.set("v", "<Leader>C", '"_C')
 vim.keymap.set("n", "<Leader>p", "<cmd>InspectTree<CR>", { desc = "opens the `:InspectTree` split", silent = true })
 
 -- Neogit
@@ -52,11 +52,23 @@ vim.keymap.set("n", "<Leader>lt", function() require("lsp_lines").toggle() end, 
 vim.keymap.set("n", "<Leader><Leader>", "<cmd>Oil<CR>", { silent = true })
 
 -- Rustaceanvim
+vim.keymap.set("n", "<Leader>ca", "<cmd>RustLsp codeAction<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>e", "<cmd>RustLsp explainError<CR>", { silent = true })
 
 -- Neotest
 vim.keymap.set("n", "<Leader>tr", function() require("neotest").run.run() end, { silent = true })
+vim.keymap.set("n", "<Leader>ta", function() require("neotest").run.run({ suite = true }) end, { silent = true })
+vim.keymap.set("n", "<Leader>td", function() require("neotest").run.run({ strategy = "dap", suite = false }) end, { silent = true })
 vim.keymap.set("n", "<Leader>tw", function() require("neotest").watch.toggle() end, { silent = true })
 vim.keymap.set("n", "<Leader>ts", function() require("neotest").summary.toggle() end, { silent = true })
 vim.keymap.set("n", "<Leader>to", function() require("neotest").output.open() end, { silent = true })
 vim.keymap.set("n", "<Leader>tp", function() require("neotest").output_panel.toggle() end, { silent = true })
+
+-- nvim-dap
+vim.keymap.set("n", "<Leader>db", function() require("dap").toggle_breakpoint() end, { silent = true })
+vim.keymap.set("n", "<Leader>dc", function() require("dap").continue() end, { silent = true })
+vim.keymap.set("n", "<Leader>du", function() require("dapui").toggle() end, { silent = true })
+vim.keymap.set('n', "<Leader>dn", function() require('dap').step_into() end)
+vim.keymap.set('n', "<Leader>dN", function() require('dap').step_over() end)
+vim.keymap.set('n', "<Leader>dp", function() require('dap').step_out() end)
+vim.keymap.set('n', "<Leader>dK", function() require('dap.ui.widgets').hover() end)
